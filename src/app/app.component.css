@@ -1,0 +1,31 @@
+.toolbar {
+  height: 88px;
+  padding: 0 22px;
+}
+.mat-toolbar {
+  background: white;
+}
+mat-toolbar-row {
+  margin:auto;
+}
+::ng-deep .mat-form-field-infix{
+  padding: .5em 0 !important;
+}
+.search-form {
+  width: 19%;
+  margin:auto;
+}
+.search-input{
+  font-size: 15px;
+  width: 100%;
+  margin:auto;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  background: url('https://feedc.com/search.063d8c0ffc13069a6605.svg') no-repeat scroll 470px 13px #f5f6f7;
+  /* padding-left:35px; */
+}
+.search-input:focus {
+  outline: none;
+}
+

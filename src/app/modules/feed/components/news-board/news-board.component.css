@@ -1,0 +1,54 @@
+.like-button {
+  background-color: #f3f4f5;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 0;
+  color: #898f99;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.like-button:focus {
+  outline: none;
+}
+.aroow-up {
+  width: 20px;
+  height: 20px;
+  background: url("https://feedc.com/assets/images/arrow-up.svg") no-repeat 50%
+    50%;
+  background-size: 11px;
+}
+.aroow-down {
+  width: 20px;
+  height: 20px;
+  background: url("https://feedc.com/assets/images/arrow-up.svg") no-repeat 50%
+    50%;
+  transform: rotate(180deg);
+  background-size: 11px;
+}
+.seen-counter {
+  color: #898f99;
+  font-size: 12px;
+}
+.autor {
+  display: flex;
+  align-items: center;
+}
+.menu-button {
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  width: 32px;
+  height: 32px;
+  background-size: 16px;
+  background: url('https://feedc.com/assets/images/more.svg') 50% 50% no-repeat;
+  border: none;
+  cursor: pointer;
+}
+.menu-button:focus {
+  outline: none;
+}

@@ -1,0 +1,8 @@
+cdk-virtual-scroll-viewport {
+  height: 100vh;
+}
+:host {
+  display: block;
+  width: 528px;
+  margin: 5px auto
+}
