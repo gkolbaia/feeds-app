@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-news-board',
@@ -7,10 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NewsBoardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
   @Input() post: any;
   ngOnInit(): void {
     console.log(this.post);
   }
-
+  navigateToPost(){
+    this.router.navigate(['/post'])
+  }
 }

@@ -1,4 +1,60 @@
-.like-button {
+.news-container{
+  width:100%;
+  margin-bottom:50px;
+  cursor:pointer;
+  border-radius:16px;
+  margin: 25px auto;
+  overflow: hidden; 
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+.news-container:hover{
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.20);
+}
+.img-container {
+  width: 100%; 
+  max-height: 297px;
+  overflow: hidden;
+}
+.img-link {
+  text-decoration: none;  
+  width: 100%;
+  height: 100%;
+}
+.img {
+  width: 100%; 
+  height: 100%;
+}
+.info-cotainer {
+  width: calc(100%-24px);
+  padding: 24px 24px 0;
+}
+.text-container{
+  width: 100%;
+}
+.header{
+  width: 100%;
+}
+.header h3{
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom:8px;
+  margin-top:0
+}
+.text p{
+ margin: 0;
+}
+.action{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; 
+}
+.liker {
+  display: flex
+}
+.liker button{
+  margin-right:8px;
   background-color: #f3f4f5;
   border: none;
   width: 40px;
@@ -12,7 +68,7 @@
   flex-direction: column;
   align-items: center;
 }
-.like-button:focus {
+.liker button:focus {
   outline: none;
 }
 .aroow-up {
@@ -31,12 +87,44 @@
   background-size: 11px;
 }
 .seen-counter {
+  display: flex;
+  align-items: center;
+}
+.seen-counter img {
+  width: 16px;
+  margin-right: 4p
+}
+.seen-counter span {
   color: #898f99;
   font-size: 12px;
 }
-.autor {
+.author-info{
+  padding: 10px 24px;
+  margin-top: 20px;
+  background:#f3f4f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -24px;
+  margin-right: -24px;
+  width: 100%;
+}
+.author-logo{
   display: flex;
   align-items: center;
+  color:black;
+  text-decoration: none
+}
+.author-logo:hover{
+  text-decoration: underline
+}
+.author-logo img{
+  width: 32px;
+  height: 32px;
+  border: 1px solid #f3f4f5;
+  background: #fff;
+  border-radius: 10px;
+  margin-right: 8px;
 }
 .menu-button {
   border-radius: 12px;
@@ -51,4 +139,7 @@
 }
 .menu-button:focus {
   outline: none;
-}
+} 
+.menu-button:hover {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+} 

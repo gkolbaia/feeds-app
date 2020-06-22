@@ -12,7 +12,7 @@ mat-toolbar-row {
   padding: .5em 0 !important;
 }
 .search-form {
-  width: 19%;
+  width: 30%;
   margin:auto;
 }
 .search-input{
@@ -22,8 +22,7 @@ mat-toolbar-row {
   padding: 15px 20px;
   border: none;
   border-radius: 12px;
-  background: url('https://feedc.com/search.063d8c0ffc13069a6605.svg') no-repeat scroll 470px 13px #f5f6f7;
-  /* padding-left:35px; */
+  background: url('https://feedc.com/search.063d8c0ffc13069a6605.svg') no-repeat scroll 95% 50% #f5f6f7;
 }
 .search-input:focus {
   outline: none;

@@ -1,42 +1,44 @@
-<a [routerLink]="['/feed']" style="text-decoration: none;color: black;">
-  <div *ngIf="post && post.type==='post'"
-    style="cursor:pointer;border-radius:16px;height:600px; margin: 25px auto; overflow: hidden; background-color: white;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);">
-    <div style="width: 100%; height: 60%;overflow: hidden;">
-      <img src="{{post?.media?.url}}" style="width: 100%; height: 100%;" alt="">
-    </div>
-    <div style="padding: 24px 24px 0;height: 100px;">
-      <div style="width: 100%;height:100%;white-space: pre-wrap; overflow: hidden;white-space: wrap; text-overflow: ellipsis;">
-        <h3 style="font-size: 20px;line-height: 24px;margin-bottom:8px;margin-top:0;">{{post?.title}}</h3>
-        <div>
-          <p style="margin:0;">{{post?.text}}</p>
-        </div>
+<div (click)=navigateToPost() class="news-container" *ngIf="post">
+  <div class="img-container">
+    <a href="#" class="img-link">
+      <img class="img" src="{{post?.media?.url}}" alt="">
+    </a>
+  </div>
+  <div class="info-cotainer">
+    <div class="text-container">
+      <div class="header">
+        <h3>{{post?.title}}</h3>
       </div>
-      <div style="display: flex;justify-content: space-between; align-items: center; margin-top: 10px;">
-        <div style="display: flex;">
-          <button class="like-button" style="margin-right:8px">
-            <div class="aroow-up"></div>
-            <span>4</span>
-          </button>
-          <button class="like-button">
-            <div class="aroow-down"></div>
-            <span>4</span>
-          </button>
-        </div>
-        <div style="display: flex;align-items: center;">
+      <div class="text">
+        <p>{{post?.text.slice(0,80)}}</p>
+      </div>
+    </div>
+    <div class="action">
+      <div class="liker">
+        <button>
+         <div class="aroow-up"></div>
+         <span>4</span>
+        </button>
+        <button class="like-button">
+          <div class="aroow-down"></div>
+          <span>4</span>
+        </button>
+      </div>
+      <div class="seen-counter">
           <img style="width: 16px;margin-right: 4px;" src="https://feedc.com/assets/images/eye.svg" alt="">
           <span class="seen-counter">1107 ნახვა</span>
-        </div>
       </div>
-      <div style="margin-top: 20px; width: 100%; display:flex;justify-content: space-between;align-items: center;">
-        <div class="autor">
-          <img src="https://firebasestorage.googleapis.com/v0/b/feedc-fbf27.appspot.com/o/users%2FA53D2F23-D08F-40C7-998E-4A556E0E8D3B1579608872.747126?alt=media&token=9b6f784e-1648-4f0c-abc6-80fcfc86f86b" alt="" style="width: 32px; height: 32x;">
-          <span>Tbilisi Daily</span>
-        </div>
-        <div class="menu">
+    </div>
+    <div class="author-info">
+      <div class="author-logo">
+          <a class="author-logo" href="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/feedc-fbf27.appspot.com/o/users%2FA53D2F23-D08F-40C7-998E-4A556E0E8D3B1579608872.747126?alt=media&token=9b6f784e-1648-4f0c-abc6-80fcfc86f86b" alt="" style="width: 32px; height: 32x;">
+              <span>Tbilisi Daily</span>
+          </a>
+      </div>
+      <div class="menu">
           <button class="menu-button"></button>
-        </div>
       </div>
     </div>
   </div>
-</a>
+</div>

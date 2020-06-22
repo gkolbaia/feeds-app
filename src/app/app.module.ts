@@ -9,13 +9,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { FeedListComponent } from './modules/feed/components/feed-list/feed-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewsBoardComponent } from './modules/feed/components/news-board/news-board.component';
+import { PostPageComponent } from './modules/feed/components/post-page/post-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
     FeedListComponent,
-    NewsBoardComponent
+    NewsBoardComponent,
+    PostPageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
