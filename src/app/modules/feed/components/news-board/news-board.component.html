@@ -1,32 +1,34 @@
-<div (click)=navigateToPost() class="news-container" *ngIf="post">
+<div class="news-container" *ngIf="post && (type==='full' || post.type ==='post')">
   <div class="img-container">
-    <a href="#" class="img-link">
+    <a routerLink="{{link}}" class="img-link" [style.cursor]="type === 'full' ? 'default' : 'pointer'">
       <img class="img" src="{{post?.media?.url}}" alt="">
     </a>
   </div>
   <div class="info-cotainer">
-    <div class="text-container">
-      <div class="header">
-        <h3>{{post?.title}}</h3>
+    <a routerLink="{{link}}" [style.cursor]="type === 'full' ? 'default' : 'pointer'" style="text-decoration: none; color: black;">
+      <div class="text-container">
+        <div class="header">
+          <h3>{{post?.title}}</h3>
+        </div>
+        <div class="text">
+          <p>{{type === 'full'? post?.text: post?.text?.slice(0,80)}}</p>
+        </div>
       </div>
-      <div class="text">
-        <p>{{post?.text.slice(0,80)}}</p>
-      </div>
-    </div>
+    </a>
     <div class="action">
       <div class="liker">
         <button>
          <div class="aroow-up"></div>
-         <span>4</span>
+         <span>{{post.likes_count}}</span>
         </button>
-        <button class="like-button">
+        <button>
           <div class="aroow-down"></div>
-          <span>4</span>
+          <span>{{post.is_disliked}}</span>
         </button>
       </div>
       <div class="seen-counter">
           <img style="width: 16px;margin-right: 4px;" src="https://feedc.com/assets/images/eye.svg" alt="">
-          <span class="seen-counter">1107 ნახვა</span>
+          <span class="seen-counter">{{post.views_count}} ნახვა</span>
       </div>
     </div>
     <div class="author-info">
@@ -38,6 +40,14 @@
       </div>
       <div class="menu">
           <button class="menu-button"></button>
+      </div>
+    </div>
+    <div class="discussion" *ngIf="type==='full'">
+      <div class="discussion-header">
+        <span>დისკუსია</span>
+      </div>
+      <div class="comment">
+        <input type="text" placeholder="კომენტარის დაწერა...">
       </div>
     </div>
   </div>

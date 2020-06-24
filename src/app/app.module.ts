@@ -10,7 +10,8 @@ import { FeedListComponent } from './modules/feed/components/feed-list/feed-list
 import { HttpClientModule } from '@angular/common/http';
 import { NewsBoardComponent } from './modules/feed/components/news-board/news-board.component';
 import { PostPageComponent } from './modules/feed/components/post-page/post-page.component';
-
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { EditorModule } from '@tinymce/tinymce-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,9 @@ import { PostPageComponent } from './modules/feed/components/post-page/post-page
     BrowserAnimationsModule,
     AngularMaterialModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    InfiniteScrollModule,
+    EditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

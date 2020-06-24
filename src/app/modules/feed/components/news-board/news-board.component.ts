@@ -7,13 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./news-board.component.css']
 })
 export class NewsBoardComponent implements OnInit {
-
+  link: string;
   constructor(private router: Router) { }
   @Input() post: any;
+  @Input() type: any;
   ngOnInit(): void {
-    console.log(this.post);
-  }
-  navigateToPost(){
-    this.router.navigate(['/post'])
+    this.link = this.type === 'cut' ? `/post/${this.post.id}` : './';
   }
 }

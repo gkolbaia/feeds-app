@@ -6,3 +6,7 @@ cdk-virtual-scroll-viewport {
   width: 528px;
   margin: 5px auto
 }
+.main-panel {
+  height: 100px;
+  overflow-y: scroll;
+}

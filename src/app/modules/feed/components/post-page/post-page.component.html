@@ -1,1 +1,3 @@
-<p>post-page works!</p>
+<div *ngIf="post" style="width:30%;margin: auto;">
+  <app-news-board [post]=post.post [type]="postType"></app-news-board>
+</div>

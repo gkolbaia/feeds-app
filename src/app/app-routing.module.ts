@@ -15,7 +15,7 @@ const routes: Routes = [
     component: FeedListComponent
   },
   {
-    path: 'post',
+    path: 'post/:id',
     component: PostPageComponent
   },
 ];
